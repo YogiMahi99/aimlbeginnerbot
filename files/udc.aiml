@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+  <pattern>Hi</pattern>
+  <template>Hi</template>
+  </category>
+  
+  <category>
+      <pattern>How are you</pattern>
+      <template>I am doing good. How are you?</template>
+  </category>
+  
+  <category>
+      <pattern>*</pattern>
+      <template>How can I help you today?I am a chatbot trained to help you with 
+          1. Falafel
+          2. Weather
+      </template>
+  </category>
+  
+  <category>
+      <pattern> What is your name</pattern>
+      <template> My name is YOGI. What is yours?</template>
+  </category>
+  
+  <category>
+      <pattern>* name is  *</pattern>
+      <think><set name="UserName"></set></think>
+      <template>
+          Hi <star index="2"/> !
+          How can I help you today? I am a chatbot trained to help you with 
+          <li>Falafel</li>
+          <li>Weather</li>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>* help * falafel *</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Falafel</set></template>
+  </category>
+  
+  <category>
+      <pattern>help * falafel *</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Falafel</set></template>
+  </category>
+  
+    <category>
+      <pattern>help * falafel</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Falafel</set></template>
+  </category>
+  
+    <category>
+      <pattern>* help * falafel</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Falafel</set></template>
+  </category>
+  
+  <category>
+      <pattern>* falafel *</pattern>
+      <template>Tell me more.<think><set name="topic">Falafel</set></think></template>
+  </category>
+  
+    <category>
+      <pattern>falafel</pattern>
+      <template>Tell me more.<think><set name="topic">Falafel</set></think></template>
+  </category>
+  
+    <category>
+      <pattern>* help * weather *</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Weather</set></template>
+  </category>
+  
+  <category>
+      <pattern>help * weather *</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Weather</set></template>
+  </category>
+  
+    <category>
+      <pattern>help * weather</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Weather</set></template>
+  </category>
+  
+    <category>
+      <pattern>* help * weather</pattern>
+      <template>Of course! What would you like to know about <set name="topic">Weather</set></template>
+  </category>
+  
+  <category>
+      <pattern>* weather *</pattern>
+      <template>Tell me more.<think><set name="topic">Weather</set></think></template>
+  </category>
+  
+    <category>
+      <pattern>weather</pattern>
+      <template>Tell me more.<think><set name="topic">Weather</set></think></template>
+  </category>
+  
+  <topic name="Falafel">
+      <!-- Question 1 -->
+      <category>
+          <pattern>What is it</pattern>
+          <template>It is a is a deep-fried ball or patty-shaped fritter of Arab origin, featuring in Middle Eastern cuisine (especially in Egyptian and Levantinecuisines) made from broad beans, ground chickpeas, or both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <!-- Question 2 -->
+      <category>
+          <pattern>* made *</pattern>
+          <template>Falafel is made from fava beans or chickpeas, or a combination of both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <category>
+          <pattern>ingredients</pattern>
+          <template>Falafel is made from fava beans or chickpeas, or a combination of both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <category>
+          <pattern>* ingredients</pattern>
+          <template>Falafel is made from fava beans or chickpeas, or a combination of both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <category>
+          <pattern>ingredients *</pattern>
+          <template>Falafel is made from fava beans or chickpeas, or a combination of both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <category>
+          <pattern>* ingredients *</pattern>
+          <template>Falafel is made from fava beans or chickpeas, or a combination of both.
+          <think><set name="Exchange1">Info</set></think>
+          </template>
+      </category>
+      <!-- Question 3 -->
+      <category>
+          <pattern>How is it eaten</pattern>
+          <template>Falafel is often served in a pita, samoon, or wrapped in a flatbread. Falafel balls may also be eaten alone as a snack or served as part of a meze tray (assortment of appetizers).
+          <think><set name="Exchange1">Eat</set></think>
+          </template>
+      </category>
+      <!-- Question 4 -->
+      <category>
+          <pattern>is it vegan</pattern>
+          <template>Yes.
+          <think><set name="Exchange1">Eat</set></think>
+          </template>
+      </category>
+      <!-- Question 5 -->
+      <category>
+          <pattern>Give me a few fun facts about it</pattern>
+          <template>
+              <think><set name="Exchange1">Fun</set></think>
+              <random>
+                  <li>Falafel is high in soluble fiber, which has been shown to be effective in lowering blood cholesterol.</li>
+                  <li>It has been speculated that its history may go back to Pharaonic Egypt.</li>
+                  <li>The word itself spread and is used in other languages such as Persian pilpil from the Sanskrit word pippalī (पिप्पली), meaning “long pepper”; or an earlier *filfal, from Aramaic pilpāl, “small round thing, peppercorn,” derived from palpēl, “to be round, roll”.</li>
+              </random>
+          </template>
+      </category>
+      <category>
+          <pattern>* fun facts *</pattern>
+          <template>
+              <think><set name="Exchange1">Fun</set></think>
+              <random>
+                  <li>Falafel is high in soluble fiber, which has been shown to be effective in lowering blood cholesterol.</li>
+                  <li>It has been speculated that its history may go back to Pharaonic Egypt.</li>
+                  <li>The word itself spread and is used in other languages such as Persian pilpil from the Sanskrit word pippalī (पिप्पली), meaning “long pepper”; or an earlier *filfal, from Aramaic pilpāl, “small round thing, peppercorn,” derived from palpēl, “to be round, roll”.</li>
+              </random>
+          </template>
+      </category>
+      
+        <!-- Exchange 2 -->
+        <category>
+          <pattern>Tell me more</pattern>
+          <template>
+              <condition name="Exchange1" value="Info">
+                    Would you like to know more about 
+                    <random>
+                      <li> Arab origin <think><set name="Exchange2">Arab</set></think></li>
+                      <li> Chickpeas <think><set name="Exchange2">Chickpeas</set></think></li>
+                      <li> Fava beans<think><set name="Exchange2">Fava</set></think></li>
+                    </random>
+              </condition>
+              <condition name="Exchange1" value="Eat">
+                    Would you like a recipe?
+                    <think><set name="Exchange2">Recipe</set></think>
+              </condition>
+              <condition name="Exchange1" value="Fun">
+                  Would you like another fun fact?
+                  <think><set name="Exchange2"></set>Fact</think>
+              </condition>
+          </template>
+      </category>
+      <category>
+         <pattern>Yes</pattern>
+          <template>
+                <condition name="Exchange2" value="Arab">The dish most likely originated in Egypt. There is a legend that a fava bean version was eaten by Coptic Christians in the Roman era as early as the 4th century during Lent, but there is no documented evidence for this.
+                <think><set name="Exchange3">Fact</set></think>
+                </condition>
+                <condition name="Exchange2" value="Chickpeas">The chickpea or chick pea is an annual legume of the family Fabaceae, subfamily Faboideae.
+                <think><set name="Exchange3">Fact</set></think>
+                </condition>
+                <condition name="Exchange2" value="Fava">Fava beans are the dried beans of the Vicia faba species of the legume family.
+                <think><set name="Exchange3">Fact</set></think>
+                </condition>
+                <condition name="Exchange2" value="Recipe">Fill a pita with falafel, cucumbers, onions and tahini. Enjoy.
+                <think><set name="Exchange3">Recipe</set></think>
+                </condition>
+                <condition name="Exchange2" value="Fact">When made with chickpeas, falafel is high in protein, complex carbohydrates, and fiber.
+                <think><set name="Exchange3">Fact</set></think>
+                </condition>
+          </template>
+      </category>
+      
+      <!-- Exchange 3 -->
+      <category>
+          <pattern>That was not helpful</pattern>
+          <template>Sorry to hear that. Why do you think that?</template>
+      </category>
+      <category>
+          <pattern>That was helpful</pattern>
+          <template>
+              Glad to hear that.
+          </template>
+      </category>
+      
+      <category>
+          <pattern>No</pattern>
+          <template>
+              Sorry to hear that!Why do you think you feel like that?
+          </template>
+      </category>
+      
+  
+  </topic> 
+  
+
+  
+    <topic name="Weather">
+    <!-- Question 1 -->
+    <category>
+        <pattern>What does the weather look like today</pattern>
+        <template>
+            <random>
+                <li><set name="Weather">Sunny</set></li>
+                <li><set name="Weather">Rainy</set></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>Should  i take my umbrella</pattern>
+        <template>  
+            <conditional name="Weather" value="Sunny">No you do not need to.</conditional>
+            <conditional name="Weather" value="Rainy">Yes it is a downpour.</conditional>
+        </template>
+    </category>
+    <!-- Question 2 -->
+    <category>
+        <pattern>Should i go the cafe today</pattern>
+        <template>Well that depends on what you were hoping to drink?</template>
+    </category>
+    <category>
+        <pattern>I want to drink *</pattern>
+        <template>
+            <think><set name="useritem"><star /></set></think>
+            <condition name="useritem" value="Coffee">It is sunny outside, you might want to get an iced coffee.</condition>
+            <condition name="useritem" value="Tea">It is rainy outside, so i would get some hot tea.</condition>
+        </template>
+    </category>
+    <!-- Question 3 -->
+    <category>
+        <pattern>Why does it rain here</pattern>
+        <template>I do not know where you live. So it might be a bit hard for me to answer.</template>
+    </category>
+    <category>
+        <pattern>I live in *</pattern>
+            <template>
+                <think><set name="location"><star /></set></think>
+                Thats good to know!
+            </template>
+    </category>
+    <!-- Question 4 -->
+    <category>
+        <pattern>What is the best time of the year to visit Seattle</pattern>
+        <template>Any time is a great time to visit Seattle but I would say summer. Do you like summer?
+        <think><set name="topic">Summer</set></think></template>
+    </category>
+    
+    <topic name="Summer">
+    <category>
+        <pattern>Yes</pattern>
+        <template><think><set name="topic">Weather</set></think><think><set name="Summer">Yes</set></think>Awesome. Here are some fun things to do in the summer in seattle: https://postcardstoseattle.com/seattle-in-the-summer/</template>
+    </category>
+    <category>
+        <pattern>No</pattern>
+        <template><think><set name="topic">Weather</set></think><think><set name="Summer">No</set></think>Thats unfortunate. May i sway with you some fun summer activities in Seattle: https://postcardstoseattle.com/seattle-in-the-summer/</template>
+    </category>
+    </topic>
+
+    <!-- Question 5 -->
+    <category>
+        <pattern>When should I visit Seattle</pattern>
+        <template>
+            <condition name="Summer" value="Yes">It is hottest in the months of June-August. Since you love the summer, it will be great.</condition>
+            <condition name="Summer" vlaue="No">It is hottest in the months of June-August. So i would avoid those months.</condition>
+        </template>
+    </category>
+    <category>
+        <pattern>Should I bring a wetsuit</pattern>
+        <template>
+            <condition name="Summer" value="Yes">Not really needed as longs you are not going out into the ocean</condition>
+            <condition name="Summer" value="No">Yes you need it everywhere</condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>That was not helpful</pattern>
+        <template>Sorry to hear that. Why do you think that was not helpful.</template>
+    </category>
+    
+    <category>
+        <pattern>That was helpful</pattern>
+        <template>Glad I could help</template>
+    </category>
+    </topic>
+  
+
+  <category>
+      <pattern>No</pattern>
+      <template>Thats unfortunate. I am a chatbot trained to assist with 1. Falafel 2.Weather</template>
+  </category>
+</aiml>
